@@ -1,6 +1,6 @@
 const assert = require("assert");
-const refBn128 = require("snarkjs").bn128;
-const refBigInt = require("snarkjs").bigInt;
+const refBn128 = require("tornado-snarkjs").bn128;
+const refBigInt = require("tornado-snarkjs").bigInt;
 
 const buildBn128 = require("../index.js").buildBn128;
 

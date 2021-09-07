@@ -2,7 +2,7 @@
 const assert = require("assert");
 const fs = require("fs");
 const path = require("path");
-const snarkjs = require("snarkjs");
+const snarkjs = require("tornado-snarkjs");
 
 const buildGroth16 = require("../index.js").buildGroth16;
 
