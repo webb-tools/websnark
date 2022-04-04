@@ -25,11 +25,6 @@ const assert = require("assert");
 const inBrowser = true;
 let NodeWorker;
 let NodeCrypto;
-if (!inBrowser) {
-    NodeWorker = require("worker_threads").Worker;
-    NodeCrypto = require("crypto");
-}
-
 
 class Deferred {
     constructor() {
