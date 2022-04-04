@@ -22,7 +22,7 @@ const bigInt = require("big-integer");
 const groth16_wasm = require("../build/groth16_wasm.js");
 const assert = require("assert");
 
-const inBrowser = (typeof window !== "undefined");
+const inBrowser = true;
 let NodeWorker;
 let NodeCrypto;
 if (!inBrowser) {
