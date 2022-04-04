@@ -5986,11 +5986,6 @@ const assert = require("assert");
 const inBrowser = true;
 let NodeWorker;
 let NodeCrypto;
-if (!inBrowser) {
-    NodeWorker = require("worker_threads").Worker;
-    NodeCrypto = require("crypto");
-}
-
 
 class Deferred {
     constructor() {
@@ -6572,7 +6567,7 @@ class Groth16 {
 module.exports = build;
 
 }).call(this)}).call(this,require('_process'))
-},{"../build/groth16_wasm.js":1,"_process":12,"assert":3,"big-integer":8,"crypto":undefined,"worker_threads":undefined}],18:[function(require,module,exports){
+},{"../build/groth16_wasm.js":1,"_process":12,"assert":3,"big-integer":8}],18:[function(require,module,exports){
 /*
     Copyright 2019 0KIMS association.
 
