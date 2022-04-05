@@ -28,9 +28,6 @@ const inBrowser = (typeof window !== "undefined") || process && process.env && p
 let NodeWorker;
 let NodeCrypto;
 
-// eslint-disable-next-line no-console
-console.log(`Running in browser ${inBrowser}`);
-
 if (!inBrowser) {
     NodeWorker = require("worker_threads").Worker;
     NodeCrypto = require("crypto");
