@@ -22,9 +22,15 @@ const bigInt = require("big-integer");
 const groth16_wasm = require("../build/groth16_wasm.js");
 const assert = require("assert");
 
-const inBrowser = (typeof window !== "undefined");
+const inBrowser = (typeof window !== "undefined") || process && process.env && process.env.FOR_BROWSER === "true";
+
+
 let NodeWorker;
 let NodeCrypto;
+
+// eslint-disable-next-line no-console
+console.log(`Running in browser ${inBrowser}`);
+
 if (!inBrowser) {
     NodeWorker = require("worker_threads").Worker;
     NodeCrypto = require("crypto");
@@ -170,7 +176,7 @@ function thread(self) {
 }
 
 // We use the Object.assign approach for the backwards compatibility
-// @params Number wasmInitialMemory 
+// @params Number wasmInitialMemory
 async function build(params) {
     const defaultParams = { wasmInitialMemory: 5000 };
     Object.assign(defaultParams, params);
